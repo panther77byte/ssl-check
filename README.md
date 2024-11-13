@@ -13,19 +13,19 @@ pip install tabulate
 ```
 
 ### Single Website Check
-To check the SSL certificate of a single website, save the script as `ssl_check.py` and run it from the command line with the following command:
+To check the SSL certificate of a single website, save the script as `checkssl.py` and run it from the command line with the following command:
 
 ```bash
-python ssl-check.py -w example.com:443
+python checkssl.py -w example.com:443
 ```
 
 Multiple Websites from a File
 To check multiple websites from a file, use the -f option. The file should contain one Fully Qualified Domain Name (FQDN) with port per line:
 ```bash
-python ssl-check.py -f websites.txt
+python checkssl.py -f domains.txt
 ```
 
-The `websites.txt` file should have the following format
+The `domains.txt` file should have the following format
 ```bash
 example.com:443
 expired.badssl.com:443
