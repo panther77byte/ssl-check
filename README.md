@@ -7,9 +7,9 @@ First Clone the repository
 ```bash
 git clone https://github.com/swarup999/ssl-check.git
 ```
-Download all the dependencies form `requirements.txt` file 
+Download all the dependencies like
 ```bash
-pip install -r requirements.txt
+pip install tabulate
 ```
 
 ### Single Website Check
