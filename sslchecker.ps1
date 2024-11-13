@@ -45,7 +45,7 @@ function Show-ResultsPopup {
         $email = $emailBox.Text
         if ($email -match "^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$") {
             # Call the Python script with the email argument and pass the email address from the input field
-            & python.exe "C:\Users\xxx\xxx\Script\sslcheck.py" -f "C:\Users\xxx\xxx\Script\domains.txt" -e $email  #use absolute path of the the all file
+            & python.exe "C:\Users\xxx\xxx\Script\checkssl.py" -f "C:\Users\xxx\xxx\Script\domains.txt" -e $email  #use absolute path of the the all file
             [System.Windows.Forms.MessageBox]::Show("Email sent to $email.")
         } else {
             [System.Windows.Forms.MessageBox]::Show("Invalid email format.")
@@ -59,7 +59,7 @@ function Show-ResultsPopup {
 
 # Step 1: Run the Python script to get SSL check results
 # Capture the output from the Python script and assign it to $sslResults
-$sslResults = & python.exe "C:\Users\xxx\xxx\Script\sslcheck.py" -f "C:\Users\xxx\xxx\Script\domains.txt"
+$sslResults = & python.exe "C:\Users\xxx\xxx\Script\checkssl.py" -f "C:\Users\xxx\xxx\Script\domains.txt"
 
 # Step 2: Display the results in a popup form
 Show-ResultsPopup -Results $sslResults
