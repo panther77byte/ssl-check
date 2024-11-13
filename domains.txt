@@ -1,0 +1,5 @@
+example.com:443
+expired.badssl.com:443
+self-signed.badssl.com:443
+
+"update with your own domains"
